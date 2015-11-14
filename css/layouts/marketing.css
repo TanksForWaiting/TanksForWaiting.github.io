@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.hide-me {
+  display: none;
+}
+
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
