@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="https://tanks-for-waiting.firebaseapp.com/css/main.css">
   <link rel="stylesheet" href="css/layouts/tanks.css">
   <link rel="import" href="https://tanks-for-waiting.firebaseapp.com/embedTFW.html">
   <meta charset="utf-8">
@@ -27,154 +28,162 @@
 </head>
 
 <body>
-  <div class="tank-game hide-me">
-    <script>
-    var doc = document.querySelector('link[rel="import"]').import;
-    var text = doc.querySelector('#tanks-for-waiting');
-    document.body.appendChild(text.cloneNode(true));
-    </script>
-  </div>
-
-<div class="everything">
-  <div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <a class="pure-menu-heading" href="https://tanks-for-waiting.firebaseapp.com">Tanks For Waiting.</a>
-
-      <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="https://github.com/TanksForWaiting/tanks-for-waiting" class="pure-menu-link">Tanks For Waiting Repo</a></li>
-        <li class="pure-menu-item"><a href="https://github.com/Shea-Wolfe" class="pure-menu-link">William's Github</a></li>
-        <li class="pure-menu-item"><a href="https://github.com/jmcreasman" class="pure-menu-link">Jonathan's Github</a></li>
-      </ul>
+  <div class="game-container hide-me grid">
+    <div class="tank-game col-2-3">
+      <script>
+        var doc = document.querySelector('link[rel="import"]').import;
+        var text = doc.querySelector('#tanks-for-waiting');
+        document.body.appendChild(text.cloneNode(true));
+      </script>
+    </div>
+    <div class="game-instructions col-1-3">
+      <h3 class="h3-instructions">Tanks for Waiting!</h3>
+      <p class="p-instructions">
+        While you're waiting for our next available service representative to get in touch with you why not play a game to stay entertained? It won't disrupt your place in our queue and you'll be alerted when your representative is ready.
+      </p>
+      <h3 class="h3-instructions">Controls</h3>
+      <p class="p-instructions">
+        Use the arrow keys to control the direction and movement of your tank.
+      </p>
+      <h3 class="h3-instructions">Instructions</h3>
+      <p class="p-instructions">
+        Maneuver about the map and run over targets to score points.
+      </p>
+      <button id="button-instructions">Click to Return Home</button>
     </div>
   </div>
 
-  <div class="splash-container">
-    <div class="splash">
-      <h1 class="splash-head">Tanks For Waiting</h1>
-      <p class="splash-subhead">
-        Blow your waiting times away!
-      </p>
-      <p>
-        <a href="#" id="switch" class="pure-button pure-button-primary">Try the game!</a>
-      </p>
+  <div class="everything">
+    <div class="header">
+      <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="https://tanks-for-waiting.firebaseapp.com">Tanks For Waiting.</a>
+
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item"><a href="https://github.com/TanksForWaiting/tanks-for-waiting" class="pure-menu-link">Tanks For Waiting Repo</a></li>
+          <li class="pure-menu-item"><a href="https://github.com/Shea-Wolfe" class="pure-menu-link">William's Github</a></li>
+          <li class="pure-menu-item"><a href="https://github.com/jmcreasman" class="pure-menu-link">Jonathan's Github</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="content-wrapper">
-    <div class="ribbon l-box-lrg pure-g">
-      <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
-
-        <h2 class="content-head content-head-ribbon">What is Tanks For Waiting?</h2>
-
+    <div class="splash-container">
+      <div class="splash">
+        <h1 class="splash-head">Tanks For Waiting</h1>
+        <p class="splash-subhead">
+          Blow your waiting times away!
+        </p>
         <p>
-          Tanks For Waiting is the answer to your online support queue woes. A Html5 game that can be imbeded directly into your support page, Tanks For Waiting provides much needed relief for customers while they wait for the next available technician. Turn a
-          stressful situation into a positive and have your customers saying "Tanks For Waiting."
-
+          <a href="#" id="switch" class="pure-button pure-button-primary">Try the game!</a>
         </p>
       </div>
     </div>
-    <div class=content>
-      <h2 class="content-head is-center">Who are we?</h2>
-      <div class="pure-g">
-        <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
-          <img class="pure-img-responsive" width="200" height="200" src="https://avatars0.githubusercontent.com/u/13772101?v=3&amp;s=460"></img>
-        </div>
-        <div class="l-box pure-u-1 pure-u-md-2-3 pure-u-lg-1-4">
+
+    <div class="content-wrapper">
+      <div class="ribbon l-box-lrg pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+
+          <h2 class="content-head content-head-ribbon">What is Tanks For Waiting?</h2>
+
           <p>
-            William Butts is a Python engineer with a love of list comprehensions and games.
-            Every new challenge is a puzzle and he won't stop until everything is solved.
-          </p>
-        </div>
-        <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
-          <img class="pure-img-responsive" width="200" height="200" src="https://avatars2.githubusercontent.com/u/13600903?v=3&amp;s=460"></img>
-        </div>
-        <div class="l-box pure-u-1 pure-u-md-2-3 pure-u-lg-1-4">
-          <p>
-            Jonathan Creasman is a Front-End engineer with a passion for learning and discovery.
-            When he’s not buried deep in Javascript he enjoys studying early American history and traveling to new places.
+            Tanks For Waiting is the answer to your online support queue woes. A Html5 game that can be imbeded directly into your support page, Tanks For Waiting provides much needed relief for customers while they wait for the next available technician. Turn a
+            stressful situation into a positive and have your customers saying "Tanks For Waiting."
+
           </p>
         </div>
       </div>
-    </div>
-
-    <div class="ribbon l-box-lrg pure-g">
-      <h2 class="content-head content-head-ribbon">Why chose Tanks For Waiting? </h2>
-
-      <div class="pure-g">
-        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-
-          <h3 class="content-subhead">
-            Simple to play.
-          </h3>
-          <p>
-            The retro design and simple controls makes Tanks For Waiting
-             a great fit for people with all levels of technical ability.
-          </p>
-        </div>
-        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-          <h3 class="content-subhead">
-            Keep customers happy.
-          </h3>
-          <p>
-            After playing a round or two of Tanks For Waiting, customers will forget they were even waiting.
-            Happier customers will lead to more productive support sessions.
-          </p>
-        </div>
-        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-          <h3 class="content-subhead">
-            Lower response time
-          </h3>
-          <p>
-            By keeping the customer on the help page,
-            your technicians can spend less time waiting for customers to begin their conversaion and spend more time creating customer solutions.
-          </p>
-        </div>
-        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-          <h3 class="content-subhead">
-            Pricing that works for you.
-          </h3>
-          <p>
-            We are commited to finding a pricing plan that works for you.
-            Get in touch with us at y@gmail.com to discuss your plan today!
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="content">
-      <h2 class="content-head is-center">Get in touch</h2>
-
-      <div class="pure-g">
-        <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-          <form class="pure-form pure-form-stacked">
-          </form>
-        </div>
-
-        <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-          <h4>Contact Us</h4>
-          <p>
-            William can be reached at wbutts1023@gmail.com.
-            Jonathan can be reached at jc@gmail.com.
-          </p>
-
-          <h4>More Information</h4>
-          <p>
-            This project was created as part of cohort 5 of The Iron Yard Durham
-            Consulting support was provided by <a href="#">David Rogers</a>
-            and <a href="#">Danai Adkisson</a>
-          </p>
+      <div class=content>
+        <h2 class="content-head is-center">Who are we?</h2>
+        <div class="pure-g">
+          <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
+            <img class="pure-img-responsive" width="200" height="200" src="https://avatars0.githubusercontent.com/u/13772101?v=3&amp;s=460"></img>
+          </div>
+          <div class="l-box pure-u-1 pure-u-md-2-3 pure-u-lg-1-4">
+            <p>
+              William Butts is a Python engineer with a love of list comprehensions and games. Every new challenge is a puzzle and he won't stop until everything is solved.
+            </p>
+          </div>
+          <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
+            <img class="pure-img-responsive" width="200" height="200" src="https://avatars2.githubusercontent.com/u/13600903?v=3&amp;s=460"></img>
+          </div>
+          <div class="l-box pure-u-1 pure-u-md-2-3 pure-u-lg-1-4">
+            <p>
+              Jonathan Creasman is a Front-End engineer with a passion for learning and discovery. When he’s not buried deep in Javascript he enjoys studying early American history and traveling to new places.
+            </p>
+          </div>
         </div>
       </div>
 
-    </div>
+      <div class="ribbon l-box-lrg pure-g">
+        <h2 class="content-head content-head-ribbon">Why chose Tanks For Waiting? </h2>
 
-    <div class="footer l-box is-center">
-      Tanks-For-Waiting!
-    </div>
+        <div class="pure-g">
+          <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
 
+            <h3 class="content-subhead">
+              Simple to play.
+            </h3>
+            <p>
+              The retro design and simple controls makes Tanks For Waiting a great fit for people with all levels of technical ability.
+            </p>
+          </div>
+          <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+            <h3 class="content-subhead">
+              Keep customers happy.
+            </h3>
+            <p>
+              After playing a round or two of Tanks For Waiting, customers will forget they were even waiting. Happier customers will lead to more productive support sessions.
+            </p>
+          </div>
+          <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+            <h3 class="content-subhead">
+              Lower response time
+            </h3>
+            <p>
+              By keeping the customer on the help page, your technicians can spend less time waiting for customers to begin their conversaion and spend more time creating customer solutions.
+            </p>
+          </div>
+          <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+            <h3 class="content-subhead">
+              Pricing that works for you.
+            </h3>
+            <p>
+              We are commited to finding a pricing plan that works for you. Get in touch with us at y@gmail.com to discuss your plan today!
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="content">
+        <h2 class="content-head is-center">Get in touch</h2>
+
+        <div class="pure-g">
+          <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+            <form class="pure-form pure-form-stacked">
+            </form>
+          </div>
+
+          <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+            <h4>Contact Us</h4>
+            <p>
+              William can be reached at wbutts1023@gmail.com. Jonathan can be reached at jc@gmail.com.
+            </p>
+
+            <h4>More Information</h4>
+            <p>
+              This project was created as part of cohort 5 of The Iron Yard Durham Consulting support was provided by <a href="#">David Rogers</a> and <a href="#">Danai Adkisson</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer l-box is-center">
+        Tanks-For-Waiting!
+      </div>
+
+    </div>
   </div>
-</div>
 
 
 
@@ -183,4 +192,5 @@
 
 </body>
 <script src="main.js"></script>
+
 </html>
