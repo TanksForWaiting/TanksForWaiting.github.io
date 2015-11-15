@@ -289,3 +289,11 @@ p.splash-subhead {
         font-size: 300%;
     }
 }
+
+textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	width: 100%;
+}
