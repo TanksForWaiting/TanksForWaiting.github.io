@@ -86,11 +86,11 @@ a.pure-button-primary {
     color: #1f8dd6;
     border-radius: 5px;
     font-size: 120%;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', Verdana, sans-serif;
 }
 
 p.splash-subhead {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', Verdana, sans-serif;
 }
 
 /*
@@ -160,6 +160,7 @@ p.splash-subhead {
     top: 100px; left: 0; bottom: 0; right: 0;
     text-align: center;
     text-transform: uppercase;
+    font-family: 'Press Start 2P', Verdana, sans-serif;
 }
 
 /* This is the main heading that appears on the blue section */
