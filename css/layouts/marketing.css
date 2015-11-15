@@ -86,11 +86,19 @@ a.pure-button-primary {
     color: #1f8dd6;
     border-radius: 5px;
     font-size: 120%;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', Verdana, sans-serif;
+}
+
+a:visited {
+  color: #1f8dd6;
+}
+
+a.non-underlined-link {
+  text-decoration: none;
 }
 
 p.splash-subhead {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', Verdana, sans-serif;
 }
 
 /*
@@ -112,6 +120,14 @@ p.splash-subhead {
     /* I need a higher z-index here because of the scroll-over effect. */
     z-index: 4;
 }
+.pure-menu-children {
+  background: #2d3e50;
+  padding: 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
 
 .home-menu .pure-menu-heading {
     color: white;
@@ -160,6 +176,7 @@ p.splash-subhead {
     top: 100px; left: 0; bottom: 0; right: 0;
     text-align: center;
     text-transform: uppercase;
+    font-family: 'Press Start 2P', Verdana, sans-serif;
 }
 
 /* This is the main heading that appears on the blue section */
@@ -287,4 +304,12 @@ p.splash-subhead {
     .splash-head {
         font-size: 300%;
     }
+}
+
+textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	width: 100%;
 }
