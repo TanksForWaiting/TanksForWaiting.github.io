@@ -89,6 +89,14 @@ a.pure-button-primary {
     font-family: 'Press Start 2P', Verdana, sans-serif;
 }
 
+a:visited {
+  color: #1f8dd6;
+}
+
+a.non-underlined-link {
+  text-decoration: none;
+}
+
 p.splash-subhead {
   font-family: 'Press Start 2P', Verdana, sans-serif;
 }
@@ -112,6 +120,14 @@ p.splash-subhead {
     /* I need a higher z-index here because of the scroll-over effect. */
     z-index: 4;
 }
+.pure-menu-children {
+  background: #2d3e50;
+  padding: 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
 
 .home-menu .pure-menu-heading {
     color: white;
