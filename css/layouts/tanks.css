@@ -6,7 +6,6 @@
 }
 .col-1-3 {
   width: 33.33%;
-  height: 700px;
 }
 .grid:after {
   content: "";
@@ -15,4 +14,16 @@
 }
 body {
   background-color: #FD7318;
+}
+.instructions-para {
+text-transform: none;
+font-family: sans-serif;
+}
+.instructions-headers {
+}
+.instructions {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-right: 5%;
+  /*padding-left: 10%;*/
 }
