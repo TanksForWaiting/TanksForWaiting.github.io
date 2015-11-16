@@ -8,25 +8,11 @@
   width: 33.33%;
   height: 700px;
 }
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 body {
   background-color: #FD7318;
-}
-.p-instructions {
-  color: black;
-}
-.h3-instructions {
-  font-family: 'Press Start 2P', Arial;
-  color: black;
-}
-.game-instructions {
-  padding-top: 3%;
-  padding-left: 2.5%;
-  padding-left: 2.5%;
-}
-#button-instructions {
-  font-size: 13px;
-  height: 50px;
-  background-color: #5FA3C6;
-  color: black;
-  font-family: 'Press Start 2P', Arial;
 }

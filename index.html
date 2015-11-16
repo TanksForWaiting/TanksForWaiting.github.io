@@ -43,26 +43,38 @@
     <div class="splash-container">
       <div class="splash">
         <div class="tfw-game" ng-app="tanks-for-waiting" ng-controller="GameController">
+          <div class="grid">
+          <div class="instructions col-1-3" ng-show="gameRunning">
+          <h4>Controls</h4>
+            <p>
+              Use the arrow keys to control the direction and movement of your
+              tank.
+            </p>
+            <h4>Instructions</h4>
+            <p>
+              Maneuver about the map and run over targets to score points.
+            </p>
+          </div>
+              <div class="col-2-3">
               <div class="tfw-score">
-                  <p>Player Score:
+                  <p ng-show="gameRunning">Player Score:
                       <span ng-show="gameRunning">{{score.$value}}</span>
                   </p>
               </div>
-              <div class="tfw-canvas">
+              <div class="tfw-canvas" ng-show="gameRunning">
                   <canvas id="screen" width="500" height="500" style="background-color: black"></canvas>
               </div>
-              <div class="tfw-button">
-                  <button id="tfw-game-button" ng-click="startGame()" ng-hide="gameRunning"><i id="spin-one" class="fa fa-cog fa-spin tfw-hide-me"></i>&nbsp;Click to Start Driving your Tank!&nbsp;<i id="spin-two" class="fa fa-cog fa-spin tfw-hide-me"></i></button>
-              </div>
+            </div>
           </div>
-        <div>
+        <div ng-hide="gameRunning">
         <img class="pure-img splash-head" src="img/tankslogo.png"></img>
         <p class="splash-subhead is-center">
           Blow your waiting times away!
           <br>
           <br>
-          <a href="#" id="switch" class="pure-button pure-button-primary is-center">Try the game!</a>
+          <a href="#" id="switch" class="pure-button pure-button-primary is-center" ng-click="startGame()">Try the game!</a>
         </p>
+        </div>
       </div>
     </div>
     </div>
