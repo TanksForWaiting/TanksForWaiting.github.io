@@ -157,7 +157,7 @@ a.non-underlined-link {
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
-    height: 88%;
+    height: 98%;
     top: 0;
     left: 0;
     position: fixed !important;
@@ -198,9 +198,9 @@ img.splash-head {
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
-    top: 87%;
+    top: 98%;
     width: 100%;
-    min-height: 12%;
+    min-height: 2%;
     z-index: 2;
     background: white;
 
