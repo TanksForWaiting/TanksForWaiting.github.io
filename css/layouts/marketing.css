@@ -23,9 +23,14 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+    color: white;
+    font-family: "Press Start 2P",Verdana, sans-serif;
+}
+
 label {
-    color: #34495e;
+  color: white;
+  font-family: Verdana, sans-serif;
 }
 
 .pure-img-responsive {
@@ -206,7 +211,8 @@ img.splash-head {
 
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
-    color: #1f8dd6;
+    color: white;
+    font-family: Verdana, sans-serif;
 }
     .content-subhead i {
         margin-right: 7px;
@@ -222,6 +228,9 @@ img.splash-head {
   background: #FD7318;
 }
 
+p {
+  color: white;
+}
 /* This is the class used for the footer */
 .footer {
     background: #111;
