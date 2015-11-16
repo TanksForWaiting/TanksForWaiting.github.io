@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="https://tanks-for-waiting.firebaseapp.com/css/main.css">
   <link rel="stylesheet" href="css/layouts/tanks.css">
-  <link rel="import" href="https://tanks-for-waiting.firebaseapp.com/embedTFW.html">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Tanks For Waiting. Your E-queueing solution.">
@@ -28,104 +26,75 @@
 </head>
 
 <body>
-  <div class="game-container hide-me grid">
-    <div class="tank-game col-2-3">
-      <script>
-        var doc = document.querySelector('link[rel="import"]').import;
-        var text = doc.querySelector('#tanks-for-waiting');
-        document.body.appendChild(text.cloneNode(true));
-      </script>
-    </div>
-    <div class="game-instructions col-1-3">
-      <h3 class="h3-instructions">Tanks for Waiting!</h3>
-      <p class="p-instructions">
-        While you're waiting for our next available service representative to get in touch with you why not play a game to stay entertained? It won't disrupt your place in our queue and you'll be alerted when your representative is ready.
-      </p>
-      <h3 class="h3-instructions">Controls</h3>
-      <p class="p-instructions">
-        Use the arrow keys to control the direction and movement of your tank.
-      </p>
-      <h3 class="h3-instructions">Instructions</h3>
-      <p class="p-instructions">
-        Maneuver about the map and run over targets to score points.
-      </p>
-      <button id="button-instructions">Click to Return Home</button>
-    </div>
-  </div>
   <div class="everything">
     <div class="header">
       <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="#top">Tanks For Waiting.</a>
+        <a class="pure-menu-heading" href="#">Tanks For Waiting.</a>
         <ul class="pure-menu-list">
-          <li class="pure-menu-item"><a href="#top" class="pure-menu-link">Home</a></li>
-          <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"><a href="#bio" class="pure-menu-link">About Us</a>
-            <ul class="pure-menu-children">
-              <li class="pure-menu-item"><a href="#bio" class="pure-menu-link">Profiles</a></li>
-              <li class="pure-menu-item"><a href="https://github.com/Shea-Wolfe" class="pure-menu-link non-underlined-link">William's Github</a></li>
-              <li class="pure-menu-item"><a href="https://github.com/jmcreasman" class="pure-menu-link non-underlined-link">Jonathans's Github</a></li>
-            </ul>
-          </li>
-          <li class="pure-menu-item"><a href="#about" class="pure-menu-link">About Tanks For Waiting.</a></li>
-          <li class="pure-menu-item"><a href="#contact" class="pure-menu-link">Contact Info</a></li>
+          <li class="pure-menu-item"><a href="#story" class="pure-menu-link">Our Story</a></li>
+          <li class="pure-menu-item"><a href="#about" class="pure-menu-link">Features</a></li>
+          <li class="pure-menu-item"><a href="#contact" class="pure-menu-link">Get in Contact</a></li>
+          <li class="pure-menu-item"><a href="#bio" class="pure-menu-link">About Us</a></li>
         </ul>
       </div>
   </div>
-
     <div class="splash-container">
       <div class="splash">
+        <div class="tfw-game" ng-app="tanks-for-waiting" ng-controller="GameController">
+          <div class="grid">
+          <div class="instructions col-1-3" ng-show="gameRunning">
+          <h4 class="instructions-headers">Controls</h4>
+            <p class="instructions-para">
+              Use the arrow keys to control the direction and movement of your
+              tank.
+            </p>
+            <br>
+            <br>
+            <h4 class="instructions-headers">Instructions</h4>
+            <p class="instructions-para">
+              Maneuver about the map and run over targets to score points.
+            </p>
+          </div>
+              <div class="col-2-3">
+              <div class="tfw-score">
+                  <p ng-show="gameRunning">Player Score:
+                      <span ng-show="gameRunning">{{score.$value}}</span>
+                  </p>
+              </div>
+              <div class="tfw-canvas" ng-show="gameRunning">
+                  <canvas id="screen" width="500" height="500" style="background-color: black"></canvas>
+              </div>
+            </div>
+          </div>
+        <div ng-hide="gameRunning">
         <img class="pure-img splash-head" src="img/tankslogo.png"></img>
         <p class="splash-subhead is-center">
           Blow your waiting times away!
           <br>
           <br>
-          <a href="#" id="switch" class="pure-button pure-button-primary is-center">Try the game!</a>
+          <a href="#" id="switch" class="pure-button pure-button-primary is-center" ng-click="startGame()">Try the game!</a>
         </p>
+        </div>
       </div>
     </div>
-
+    </div>
+<a name="story"></a>
     <div class="content-wrapper">
-      <div class="ribbon l-box-lrg pure-g">
+      <div class="ribbon-teal l-box-lrg pure-g">
+        <h2 class="content-head content-head-ribbon">Our Story</h2>
         <div class="pure-u-1">
-
-          <h2 class="content-head content-head-ribbon">What is Tanks For Waiting?</h2>
 
           <p>
             Tanks For Waiting is the answer to your online support queue woes.
-            A Html5 game that can be imbeded directly into your support page,
+            A HTML5 game that can be imbeded directly into your support page,
             Tanks For Waiting provides much needed relief for customers while they wait for the next available technician.
             Next time you have a support backlog just tell your customers "Tanks For Waiting".
           </p>
         </div>
       </div>
-      <a name="bio"></a>
-      <div class=content>
-        <h2 class="content-head is-center">Who are we?</h2>
-        <div class="pure-g">
-          <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
-            <a href="https://github.com/Shea-Wolfe"><img class="pure-img-responsive" width="200" height="200" src="https://avatars0.githubusercontent.com/u/13772101?v=3&amp;s=460"></img></a>
-          </div>
-          <div class="l-box pure-u-1 pure-u-md-2-3 pure-u-lg-1-4">
-            <p>
-              William Butts is a Python engineer with a love of list comprehensions and games.
-              Every new challenge is a puzzle and he won't stop until everything is solved.
-              View his Github page <a href="https://github.com/Shea-Wolfe">here</a>.
-            </p>
-          </div>
-          <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
-          <a href="https://github.com/jmcreasman">  <img class="pure-img-responsive" width="200" height="200" src="https://avatars2.githubusercontent.com/u/13600903?v=3&amp;s=460"></img></a>
-          </div>
-          <div class="l-box pure-u-1 pure-u-md-2-3 pure-u-lg-1-4">
-            <p>
-              Jonathan Creasman is a Front-End engineer with a passion for learning and discovery.
-              When he’s not buried deep in Javascript he enjoys studying early American history and traveling to new places.
-              View his Github page <a href="https://github.com/jmcreasman">here</a>.
-            </p>
-          </div>
-        </div>
-      </div>
       <a name="about"></a>
-      <div class="ribbon l-box-lrg pure-g">
-        <h2 class="content-head content-head-ribbon">Why chose Tanks For Waiting? </h2>
+      <div class="ribbon-orange l-box-lrg pure-g">
+        <h2 class="content-head content-head-ribbon">Features</h2>
 
         <div class="pure-g">
           <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -167,10 +136,9 @@
           </div>
         </div>
       </div>
-
       <a name="contact"></a>
-      <div class="content">
-        <h2 class="content-head is-center">Get in touch</h2>
+      <div class="ribbon-teal l-box-lrg pure-g">
+        <h2 class="content-head content-head-ribbon">Get in Contact</h2>
 
         <div class="pure-g">
           <div class="l-box-lrg pure-u-1 pure-u-md-1-2">
@@ -191,26 +159,59 @@
       </fieldset>
   </form>
 
-          </div>
 
+          </div>
           <div class="l-box-lrg pure-u-1 pure-u-md-1-2">
-            <h4>Contact Us</h4>
-            <p>
-              William can be reached at wbutts1023@gmail.com.<br>
-              Jonathan can be reached at jc@gmail.com.
-            </p>
-
-            <h4>More Information</h4>
-            <p>
-              This project was created as part of cohort 5 of The Iron Yard Durham
-              Consulting support was provided by <a href="https://github.com/al-the-x">David Rogers</a>
-              and <a href="https://github.com/powder-river">Danai Adkisson</a>
-            </p>
+            <img id="target-picture" class="pure-img-responsive" src="img/tank-target.png"></img>
           </div>
+
+
         </div>
 
       </div>
+      <a name="bio"></a>
+      <div class="ribbon-orange l-box-lrg pure-g">
+        <h2 class="content-head content-head-ribbon">About us</h2>
+        <div class="pure-g">
+          <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
+            <a href="https://github.com/Shea-Wolfe" title="Will Butts aka. Shea_Wolfe on Github"><img class="pure-img-responsive" width="200" height="200" src="https://avatars0.githubusercontent.com/u/13772101?v=3&amp;s=460"></img></a>
+          </div>
+          <div class="l-box pure-u-1 pure-u-md-2-3 pure-u-lg-1-4">
+            <p>
+              William Butts is a Python engineer with a love of list comprehensions and games.
+              Every new challenge is a puzzle and he won't stop until everything is solved.
+              Send him an e-mail at wbutts1023@gmail.com
+              </p>
+              <div class="pure-g">
+              <div class="pure-1-2">
+              <a href="https://github.com/Shea-Wolfe" title="Will Butts aka. Shea_Wolfe on Github"><img class="pure-img" src="img/GitHub-Mark-32px.png"></img></a>
+            </div>
+            <div class="pure-1-2">
+              <a href="https://www.linkedin.com/in/william-butts-60124327" title="Will Butts on Linkedin"><img class="pure-img linkedin" src="img/In-2C-34px-R.png"></img></a>
+            </div>
+            </div>
+          </div>
+          <div class="l-box pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
+          <a href="https://github.com/jmcreasman" title="Jonathan Creasman on Github">  <img class="pure-img-responsive" width="200" height="200" src="https://avatars2.githubusercontent.com/u/13600903?v=3&amp;s=460"></img></a>
+          </div>
+          <div class="l-box pure-u-1 pure-u-md-2-3 pure-u-lg-1-4">
+            <p>
+              Jonathan Creasman is a Front-End engineer with a passion for learning and discovery.
+              When he’s not buried deep in Javascript he enjoys studying early American history and traveling to new places.
+              Send him an e-mail at jmcreasman89@gmail.com
+            </p>
+              <div class="pure-g">
+              <div class="pure-1-2">
+              <a href="https://github.com/jmcreasman" title="Jonathan Creasman on Github"><img class="pure-img" src="img/GitHub-Mark-32px.png"></img></a>
+            </div>
+              <div class="pure-1-2">
+              <a href="https://www.linkedin.com/in/jonathan-creasman-39a04648" title="Jonathan Creasman on Linkedin"><img class="pure-img linkedin" src="img/In-2C-34px-R.png"></img></a>
+            </div>
+          </div>
 
+          </div>
+        </div>
+      </div>
       <div class="footer l-box is-center">
         Tanks-For-Waiting!
       </div>
@@ -224,6 +225,13 @@
 
 
   </body>
-<script src="main.js"></script>
+  <script src="https://tanks-for-waiting.firebaseapp.com/bower_components/jquery/dist/jquery.js"></script> -->
+  <script src="https://tanks-for-waiting.firebaseapp.com/bower_components/angular/angular.js"></script>
+  <script src="https://tanks-for-waiting.firebaseapp.com/bower_components/angular-route/angular-route.js"></script>
+  <script src="https://tanks-for-waiting.firebaseapp.com/bower_components/firebase/firebase.js"></script>
+  <script src="https://tanks-for-waiting.firebaseapp.com/bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script src="https://tanks-for-waiting.firebaseapp.com/js/main.js"></script>
+  <script src="https://tanks-for-waiting.firebaseapp.com/js/gameController.js"></script>
+  <script src="main.js"></script>
 
 </html>

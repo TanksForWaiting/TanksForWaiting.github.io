@@ -6,27 +6,24 @@
 }
 .col-1-3 {
   width: 33.33%;
-  height: 700px;
+}
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 body {
   background-color: #FD7318;
 }
-.p-instructions {
-  color: black;
+.instructions-para {
+text-transform: none;
+font-family: sans-serif;
 }
-.h3-instructions {
-  font-family: 'Press Start 2P', Arial;
-  color: black;
+.instructions-headers {
 }
-.game-instructions {
-  padding-top: 3%;
-  padding-left: 2.5%;
-  padding-left: 2.5%;
-}
-#button-instructions {
-  font-size: 13px;
-  height: 50px;
-  background-color: #5FA3C6;
-  color: black;
-  font-family: 'Press Start 2P', Arial;
+.instructions {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-right: 5%;
+  /*padding-left: 10%;*/
 }
