@@ -97,10 +97,6 @@ a.non-underlined-link {
   text-decoration: none;
 }
 
-p.splash-subhead {
-  font-family: 'Press Start 2P', Verdana, sans-serif;
-}
-
 /*
  * -- MENU STYLES --
  * I want to customize how my .pure-menu looks at the top of the page
@@ -170,25 +166,20 @@ p.splash-subhead {
 .splash {
     /* absolute center .splash within .splash-container */
     width: 80%;
-    height: 50%;
+    height: 85%;
     margin: auto;
     position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
+    top: 0; left: 0; bottom: 0; right: 0;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Press Start 2P', Verdana, sans-serif;
 }
 
 /* This is the main heading that appears on the blue section */
-.splash-head {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    border: 3px solid white;
-    padding: 1em 1.6em;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
+
+img.splash-head {
+  margin: auto;
+  width: auto;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -196,6 +187,8 @@ p.splash-subhead {
     color: white;
     letter-spacing: 0.05em;
     opacity: 0.8;
+    width:auto;
+    font-family: 'Press Start 2P', Verdana, sans-serif;
 }
 
 /*
