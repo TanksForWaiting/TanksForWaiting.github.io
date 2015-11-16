@@ -169,7 +169,7 @@ a.non-underlined-link {
     height: 85%;
     margin: auto;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 10%; left: 0; bottom: 0; right: 0;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Press Start 2P', Verdana, sans-serif;
@@ -180,6 +180,7 @@ a.non-underlined-link {
 img.splash-head {
   margin: auto;
   width: auto;
+  max-height: 70%;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -297,6 +298,12 @@ img.splash-head {
     .splash-head {
         font-size: 300%;
     }
+    img.splash-head {
+      margin: auto;
+      width: auto;
+      max-height: 100%;
+    }
+
 }
 
 textarea {
