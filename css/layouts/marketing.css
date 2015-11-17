@@ -348,3 +348,20 @@ ul.acknowledgements{
   max-height: 2em;
   padding-right: .5em;
 }
+
+.splash-container {
+  padding-bottom: 5em;
+}
+
+p.story {
+  padding-left: 2em;
+  margin-right: 5em;
+}
+
+.mail {
+  padding-top: .5em;
+}
+
+img.github {
+  padding-left: 1em
+}
