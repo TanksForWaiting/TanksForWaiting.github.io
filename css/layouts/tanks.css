@@ -18,8 +18,11 @@ body {
 .instructions-para {
 text-transform: none;
 font-family: sans-serif;
+text-align: left;
+
 }
 .instructions-headers {
+  text-align: left;
 }
 .instructions {
   padding-top: 10%;
