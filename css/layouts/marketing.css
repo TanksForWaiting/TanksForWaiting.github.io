@@ -342,3 +342,9 @@ img.linkedin {
 ul.acknowledgements{
   color:white
 }
+
+.icon {
+  max-width: 2em;
+  max-height: 2em;
+  padding-right: .5em;
+}
