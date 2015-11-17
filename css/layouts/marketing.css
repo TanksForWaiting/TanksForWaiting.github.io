@@ -244,6 +244,10 @@ p {
     color: white
 }
 
+#switch {
+  display: none;
+}
+
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
@@ -309,6 +313,13 @@ p {
       max-height: 100%;
     }
 
+    #switch {
+      display: initial;
+    }
+
+    #mobile {
+      display: none;
+    }
 }
 
 textarea {
@@ -326,4 +337,14 @@ img.linkedin {
 #target-picture {
   position: relative;
   margin-top: 5em
+}
+
+ul.acknowledgements{
+  color:white
+}
+
+.icon {
+  max-width: 2em;
+  max-height: 2em;
+  padding-right: .5em;
 }
