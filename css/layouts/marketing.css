@@ -294,6 +294,13 @@ p {
     .l-box-lrg {
         border: none;
     }
+    #switch {
+      display: initial;
+    }
+
+    #mobile {
+      display: none;
+    }
 
 }
 
@@ -311,14 +318,6 @@ p {
       margin: auto;
       width: auto;
       max-height: 100%;
-    }
-
-    #switch {
-      display: initial;
-    }
-
-    #mobile {
-      display: none;
     }
 }
 
