@@ -360,3 +360,7 @@ p.story {
 img.github {
   padding-left: 1em
 }
+
+.entry {
+  color: black;
+}
